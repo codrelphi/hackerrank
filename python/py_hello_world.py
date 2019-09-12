@@ -5,3 +5,5 @@
 # date: 2019-09-12
 # source: https://www.hackerrank.com/challenges/py-hello-world/problem
 #=====================================================================
+
+print("Hello, World!")
