@@ -18,4 +18,7 @@ def is_leap(year):
 
 if __name__ == "__main__":
     year = int(input())
-    print(is_leap(year))
+    if 1900 <= year and year <= 10**5:
+        print(is_leap(year))
+    else:
+        print("Error: 1900 <= year <= 10^5 !")
