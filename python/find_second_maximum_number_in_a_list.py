@@ -8,17 +8,9 @@
 
 if __name__ == '__main__':
     n = int(input())
-    arr = input().strip().split(' ')
-    if len(arr) != n:
-        print("Error!")
-        exit()
+    arr = map(int, input().split())
     arr = [int(i) for i in arr]
-    #print(arr)
-    actual_max = max(arr)
-    for i in arr:
-        if max(arr) == actual_max:
-            arr.remove(actual_max)
-        else:
-            runner_up = max(arr)
-            break
+    new_arr = [i for i in arr if i!=max(arr)]
+    runner_up = max(new_arr)
     print(runner_up)
+    
