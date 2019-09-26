@@ -13,16 +13,12 @@ import sys
 
 
 def compareTriplets(a, b):
-    # a: alice
-    # b: bob
     result = [0, 0]
-
     for i in range(len(a)):
         if a[i] > b[i]:
             result[0] += 1
         if a[i] < b[i]:
             result[1] += 1
-
     return result
 
 
