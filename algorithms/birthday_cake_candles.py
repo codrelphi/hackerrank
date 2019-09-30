@@ -5,3 +5,20 @@
 # date: 2019-09-30
 # source: https://www.hackerrank.com/challenges/birthday-cake-candles/problem
 #=================================================================================
+
+
+def birthdayCakeCandles(ar):
+    return  len([i for i in ar if i == max(ar)])
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = birthdayCakeCandles(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
