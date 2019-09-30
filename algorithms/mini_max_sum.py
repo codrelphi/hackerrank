@@ -6,21 +6,16 @@
 # source: https://www.hackerrank.com/challenges/mini-max-sum/problem
 #=================================================================================
 
-# TODO:
-# - create an optimized/generic version of this script
 def miniMaxSum(arr):
     l = []
+
+    # an optimized generic version to the problem
     for i in range(len(arr)):
-        if i == 0:
-            l.append(arr[1] + arr[2] + arr[3] + arr[4])
-        if i == 1:
-            l.append(arr[0] + arr[2] + arr[3] + arr[4])
-        if i == 2:
-            l.append(arr[0] + arr[1] + arr[3] + arr[4])
-        if i == 3:
-            l.append(arr[0] + arr[1] + arr[2] + arr[4])
-        if i == 4:
-            l.append(arr[0] + arr[1] + arr[2] + arr[3])
+        s = 0
+        for j in range(len(arr)):
+            if i != j:
+                s += arr[j]
+        l.append(s)
 
     print("{} {}".format(min(l), max(l)))
 
