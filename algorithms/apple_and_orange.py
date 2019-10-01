@@ -12,24 +12,10 @@ import re
 import sys
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    # house [s, t]
-    # apple position: a
-    # orange position: b
-    # apples: apples
-    # oranges: oranges
-    nb_apples = nb_oranges = 0
     position_apples = [(a + apple) for apple in apples]
     position_oranges = [(b + orange) for orange in oranges]
-    for pa in position_apples:
-        if pa >= s and pa <= t:
-            nb_apples += 1
-
-    for po in position_oranges:
-        if po >= s and po <= t:
-            nb_oranges += 1
-
-    print(nb_apples)
-    print(nb_oranges)
+    print(len([apple for apple in position_apples if apple >= s and apple <= t]))
+    print(len([orange for orange in position_oranges if orange >= s and orange <= t]))
 
 if __name__ == '__main__':
     st = input().split()
