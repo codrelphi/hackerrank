@@ -12,18 +12,14 @@ import re
 import sys
 
 def kangaroo(x1, v1, x2, v2):
-    MAX_JUMPS = 100000 # simulation of positive infinity
-    if x2 > x1 and v2 > v1:
+    if x2 > x1 and v2 >= v1:
         return 'NO'
     else:
-        p1 = x1
-        p2 = x2
-        for i in range(MAX_JUMPS):
-            p1 += v1
-            p2 += v2
-            if p1 == p2:
-                return 'YES'
-        return 'NO'
+        if ((x1 - x2) % (v2 - v1)) == 0:
+            # so number of jump is an integer
+            return 'YES'
+        else:
+            return 'NO'
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
