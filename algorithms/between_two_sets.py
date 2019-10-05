@@ -8,22 +8,24 @@
 #=================================================================================
 
 def getTotalX(a, b):
-    x = set(range(2, 36))
-    y = set()
-    z = set()
-    for i in x:
-        for j in a:
-            if i % j == 0:
-                y.add(i)
+    n1 = set(range(2, 6+1))
+    n2 = set(range(24, 36+1))
+    x = n1.union(n2)
+    y = []
+    z = []
+    print(n1)
+    print(n2)
+    print(x)
+
+    for i in list(x):
+        if i % 2 == 0 and i % 6:
+            y.append(i)
     print(y)
     for k in y:
-        for l in b:
-            if l % k == 0:
-                z.add(l)
+        if 24 % k == 0 and 36 % k == 0:
+            z.append(k)
     #x = [i for i in range(2, 96) for j in [2, 4] if i%j == 0]
 
     print(z)
 
-    #return len(m)
-
-getTotalX([2, 4], [16, 32, 96])
+getTotalX([2, 6], [24, 36])
