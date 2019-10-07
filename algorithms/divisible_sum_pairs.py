@@ -13,13 +13,7 @@ import sys
 
 
 def divisibleSumPairs(n, k, ar):
-    cpt = 0
-    for i in range(n):
-        for j in range(n):
-            if i < j and (ar[i] + ar[j]) % k == 0:
-                #print("({}, {}) --> {} + {} = {}".format(i, j, ar[i], ar[j], ar[i] + ar[j]))
-                cpt += 1
-    return cpt
+    return len([(ar[i], ar[j]) for i in range(n) for j in range(n) if i < j and (ar[i] + ar[j]) % k == 0])
 
 
 if __name__ == '__main__':
