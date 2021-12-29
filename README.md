@@ -1,2 +1,2 @@
 # hackerrank
-👌 Contains solutions to HackerRank problems. 💪
+👌 Contains solutions (in Python 🐍) to HackerRank problems. 💪
