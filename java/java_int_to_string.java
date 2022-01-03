@@ -19,7 +19,7 @@ public class Solution {
 
    // début code écrit
 
-   String s = n + "";
+   String s = new Integer(n).toString();
 
    // fin code écrit
 
