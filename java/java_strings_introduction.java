@@ -9,13 +9,6 @@ import java.util.*;
 
 public class Solution {
 
-	public static int getWordNumber(String word) {
-	    int nbr = 0;
-	    for (int i=0; i<word.length(); i++) 
-	    { nbr += (int) word.charAt(i);}
-	    return nbr;
-	}
-
     public static void main(String[] args) {
         
         Scanner sc=new Scanner(System.in);
@@ -23,7 +16,7 @@ public class Solution {
         String B=sc.next();
         
         System.out.println(A.length() + B.length());
-        if (getWordNumber(A) < getWordNumber(B)) {
+        if (A.compareTo(B) <= 0) {
             System.out.println("No");
         }
         else {
