@@ -15,17 +15,23 @@ public class Solution {
         String A=sc.next();
         
         int taille = A.length();
-        int middle = taille/2;
-        String firstPartA = A.substring(0, middle);
-        String secondPartA = A.substring(middle + 1);
-        String temp = "";
-        for (int i=0; i<=middle; i++) {
-            temp = temp + Character.toString(secondPartA.charAt(i));
-        }
-        if(firstPartA.equals(temp)) {
-            System.out.println("Yes");
-        } else {
+        if (taille % 2 == 0) {
             System.out.println("No");
+        }
+        else {
+            int middle = taille/2;
+            String fPartA = A.substring(0, middle);
+            String sPartA = A.substring(middle+1);
+            for (int i=0; i<middle; i++) {
+                if (fPartA.charAt(i) == sPartA.charAt(middle-i-1)) {
+                    continue;
+                }
+                else {
+                    System.out.println("No");
+                    break;
+                }
+            }
+            System.out.println("Yes");         
         }
     }
 }
