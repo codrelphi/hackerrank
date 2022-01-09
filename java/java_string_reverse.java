@@ -15,8 +15,20 @@ public class Solution {
         String A=sc.next();
         
         int taille = A.length();
+        boolean c = false;
         if (taille % 2 == 0) {
-            System.out.println("No");
+            for (int i=0; i<taille; i++) {
+                if (A.charAt(i) == A.charAt(taille-i-1)) {
+                    c = true;
+                }
+                else {
+                    System.out.println("No");
+                    break;
+                }
+            }
+            if (c == true) {
+                System.out.println("Yes");     
+            }
         }
         else {
             int middle = taille/2;
